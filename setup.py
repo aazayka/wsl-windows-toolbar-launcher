@@ -9,13 +9,6 @@ if sys.version_info.major <= 2:
     ))
     exit(1)
 
-if uname().system.upper() != "LINUX" or "MICROSOFT" not in uname().release.upper():
-    sys.stderr.write("WSL Linux environment required (detected: %s [%s])" % (
-        uname().system,
-        uname().release
-    ))
-    exit(1)
-
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
